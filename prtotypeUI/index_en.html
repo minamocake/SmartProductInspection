@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+
+<html>
+	<!--<meta http-equiv="refresh" content="10" >-->
+	<head>
+		<title>Smart Factory Inspection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$("iframe").on("load", function(){
+	    try {
+	        $(this).height(0);
+	        $(this).height(this.contentWindow.document.documentElement.scrollHeight);
+	    } catch (e) {
+	    }
+	});
+	$("iframe").trigger("load");
+	</script>
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Header -->
+						<ul>
+							<li class="current"><a href="index_en.html" size="7">Factory Monitoring</a></li>
+							<!--<li><a href="#" class="button primary">Analytics</a></li>-->
+							<li class="current"><a href="index_en.html" size="7">Factory Visualization</a></li>
+						</ul>
+				<!-- Main -->
+				<!-- WEBカメラ-->
+					<section id="main">
+						<h2>Realtime Movie</h2>
+						<video id="myVideo" width="500" height="300" autoplay="1" ></video>
+						<script type="text/javascript">
+						navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || window.navigator.mozGetUserMedia;
+						window.URL = window.URL || window.webkitURL;
+						var video = document.getElementById('myVideo');
+						var localStream = null;
+						navigator.getUserMedia({video: true, audio: false},
+						function(stream) { // for success case
+						console.log(stream);
+//						video.src = window.URL.createObjectURL(stream);
+//					<iframe src="iframe.html"　width="500" height="300"style="zoom:0.55"> </iframe><br>
+						video.srcObject=stream;
+						},
+						function(err) { // for error case
+						console.log(err);
+						}
+						);
+					 </script>
+					 		<iframe  src="iframe.html"width="400" height="300"></iframe>
+							<iframe src="iframe2.html"width="400" height="300"></iframe>
+							<!--<iframe src="iframe.html" width="100%"scrolling="no"></iframe>-->
+							<div class="items">
+								<div class="item intro span-2">
+									<h1>Production line A</h1>
+								</div>
+
+								<article class="item thumb span-1">
+									<h2>One before</h2>
+								  <iframe  src="iframe/1.html"width="250" height="200" class="image"></iframe>
+								</article>
+								<article class="item thumb span-1">
+									<h2>Two before</h2>
+									<iframe  src="iframe/2.html"width="250" height="200" class="image"></iframe>
+								</article>
+								<article class="item thumb span-1">
+									<h2>Three before</h2>
+									<iframe  src="iframe/3.html"width="250" height="200" class="image"></iframe>
+								</article>
+								<article class="item thumb span-1">
+									<h2>Four before</h2>
+									<iframe  src="iframe/4.html"width="250" height="200" class="image"></iframe>
+								</article>
+						<!-- Items
+							<div class="items">
+								<div class="item intro span-2">
+									<h1>Production line A</h1>
+								</div>
+
+								<article class="item thumb span-1">
+									<h2>One before</h2>
+								  <a href="images/1.png" class="image"><img src="images/1.png" alt=""></a>
+								</article>
+								<article class="item thumb span-1">
+									<h2>Two before</h2>
+									<a href="images/2.png" class="image"><img src="images/2.png" alt=""></a>
+								</article>
+								<article class="item thumb span-1">
+									<h2>3つ前</h2>
+									<iframe  src="iframe/1.html"width="250" height="200" class="image"></iframe>
+								</article>
+								<article class="item thumb span-1">
+									<h2>Three before</h2>
+									<a href="images/3.png" class="image"><img src="images/3.png" alt=""></a>
+								</article>
+								<article class="item thumb span-1">
+									<h2>Four before</h2>
+									<a href="images/4.png" class="image"><img src="images/4.png" alt=""></a>
+								</article>
+
+							</div> -->
+						<!-- Items -->
+<!--
+
+<article class="item thumb span-1">
+	<h2>4つ前</h2>
+	<a href="images/4.png" class="image"><img src="images/4.png" alt=""></a>
+</article>
+
+
+							<div class="items">
+								<div class="item intro span-2">
+									<h1>製造ラインB</h1>
+								</div>
+
+								<article class="item thumb span-2">
+									<h2>1つ前</h2>
+									<a href="images/data/normal/normal11.jpg" class="image"><img src="images/data/normal/normal11.jpg" alt=""></a>
+								</article>
+								<article class="item thumb span-1">
+									<h2>2つ前</h2>
+									<a href="images/data/normal/normal12.jpg" class="image"><img src="images/data/normal/normal12.jpg" alt=""></a>
+								</article>
+								<article class="item thumb span-1">
+									<h2>3つ前</h2>
+									<a href="images/data/normal/normal13.jpg" class="image"><img src="images/data/normal/normal13.jpg" alt=""></a>
+								</article>
+								<article class="item thumb span-1">
+									<h2>4つ前</h2>
+									<a href="images/data/normal/normal14.jpg" class="image"><img src="images/data/normal/normal14.jpg" alt=""></a>
+								</article>
+							</div>
+-->
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<section>
+<!--							<p>This is <strong>Parallelism</strong>, a responsive portfolio site template by <a href="http://html5up.net">HTML5 UP</a>. Free for personal
+							and commercial use under the <a href="http://html5up.net/license">Creative Commons Attribution</a> license.</p>
+-->
+						</section>
+						<section>
+<!--							<ul class="icons">
+								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+								<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							</ul>-->
+							<ul class="copyright">
+								<li>Smart Factory Inspection</li>
+							</ul>
+						</section>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
