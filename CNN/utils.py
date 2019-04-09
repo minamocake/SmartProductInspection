@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
-
 import random
 import os
 import cv2
@@ -62,9 +61,7 @@ def load_images(classes, data_list):
     labels = []
     num_classes = len(classes)
     for data in data_list:
-#        print(data)
         img = cv2.imread(data)
-#        print(data)
         img = cv2.resize(img, (IMG_SIZE, IMG_SIZE))
         img = img/255.0
         images.append(img)

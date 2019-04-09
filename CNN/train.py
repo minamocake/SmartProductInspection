@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
-
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Convolution2D, MaxPooling2D
@@ -17,8 +16,6 @@ print(os.path.abspath('data'))
 # parsing arguments
 def parse_args():
     parser = argparse.ArgumentParser(description='image classifier')
-#    parser.add_argument('--data', dest='data_dir', default='data')
-#    parser.add_argument('--list', dest='list_dir', default='list')
     parser.add_argument('--data', dest='data_dir', default=os.path.abspath('data'))
     parser.add_argument('--list', dest='list_dir', default=os.path.abspath('list'))
     args = parser.parse_args()
@@ -50,9 +47,7 @@ EPOCH = 50
 
 # building the model
 print('building the model ...')
-
 model = Sequential()
-
 model.add(Convolution2D(32, 3, 3, border_mode='valid',
                         input_shape=x_train.shape[1:]))
 model.add(Activation('relu'))
@@ -96,6 +91,7 @@ val_loss = hist.history['val_loss']
 acc = hist.history['acc']
 val_acc = hist.history['val_acc']
 
+# Output of trainning result
 nb_epoch = len(loss)
 fig, ax1 = plt.subplots()
 ax1.plot(range(nb_epoch), loss, label='loss', color='b')
