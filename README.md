@@ -52,4 +52,4 @@ Also, you can classify three or more classes．
 If you make linked three or more folders and replace under the ./CNN/data ,
 you can do it.
 
-You can use original data, but VIEW maybe broken.
+However, View maybe broken.
