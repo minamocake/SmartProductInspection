@@ -18,7 +18,7 @@ Clone this repository
 cd SmartProductInspection
 ```
 
-*When using for the first time, you must delete all files of list folder.
+*When using for the first time, you must delete all files of "list" folder.
 
 ## Training
 
@@ -41,3 +41,15 @@ python ./detect.py  --model ./CNN/YOUR_MODEL_NAME
 
 Please access by Web browser(Reccomend: FireFox)
 ./SmartProductInspection/prtotypeUI/index_en.html
+
+# If you wanna use original data
+
+You need to make 2 folder "good" and "bad".
+Next you replace ./CNN/data/good and ./CNN/data/bad to its.
+Finally, you delete all files of "list" folder.
+
+Also, you can classify three or more classes．
+If you make linked three or more folders and replace under the ./CNN/data ,
+you can do it.
+
+You can use original data, but VIEW maybe broken.
